@@ -1,0 +1,1 @@
+package sopo.cn.hibernate20191126.model;
