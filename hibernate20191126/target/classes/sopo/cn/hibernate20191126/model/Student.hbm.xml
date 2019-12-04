@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2019??11??26?? ????5:06:09 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2019??11??28?? ????11:47:12 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="sopo.cn.hibernate20191126.model.Student" table="STUDENT">
         <id name="id" type="int">
@@ -20,5 +20,9 @@
         <property name="date" type="java.sql.Date">
             <column name="DATE" />
         </property>
+        
+        <many-to-one name="teacher" class="sopo.cn.hibernate20191126.model.Teacher" fetch="join">
+        	<column name="TEACHER_ID"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>
