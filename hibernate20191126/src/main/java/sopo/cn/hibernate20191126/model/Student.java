@@ -30,6 +30,15 @@ public class Student {
 	private int age;
 	private Date date;
 	private Teacher teacher;
+	private StudentInfo studentInfo;
+
+	public StudentInfo getStudentInfo() {
+		return studentInfo;
+	}
+
+	public void setStudentInfo(StudentInfo studentInfo) {
+		this.studentInfo = studentInfo;
+	}
 
 	public Teacher getTeacher() {
 		return teacher;

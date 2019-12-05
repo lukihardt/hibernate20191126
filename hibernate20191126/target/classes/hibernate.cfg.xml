@@ -2,26 +2,48 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
                                          "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
- <session-factory>
-  <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate1126?serverTimezone=Asia/Shanghai</property>
-  <property name="connection.username">root</property>
-  <property name="connection.password">F2NRnjVsKe</property>
-  <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-  <property name="hibernate.show_sql">true</property>
-  <property name="hibernate.hbm2ddl.auto">update</property>
-  <property name="hibernate.format_sql">true</property>
-  <property name="hibernate.use_identifier_rollback">true</property>
-  <property name="hibernate.c3p0.max_size">20</property>
-  <property name="hibernate.c3p0.min_size">1</property>
-  <property name="hibernate.c3p0.timeout">5000</property>
-  <property name="hibernate.c3p0.max_statements">100</property>
-  <property name="hibernate.c3p0.idle_test_period">3000</property>
-  <property name="hibernate.c3p0.acquire_increment">2</property>
-  <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
-  
-  <mapping resource="sopo/cn/hibernate20191126/model/Student.hbm.xml"/>
-  <mapping resource="sopo/cn/hibernate20191126/model/CarBrand.hbm.xml"/>
-  <mapping resource="sopo/cn/hibernate20191126/model/Teacher.hbm.xml"/>
- </session-factory>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate1204_4?serverTimezone=Asia/Shanghai</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">F2NRnjVsKe</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.use_identifier_rollback">true</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.timeout">5000</property>
+		<property name="hibernate.c3p0.max_statements">100</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
+		<property name="hibernate.c3p0.acquire_increment">2</property>
+		<property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Student.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/CarBrand.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Teacher.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/IDCard.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Person.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/IdCard2.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Person2.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Tcher.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Course.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Tcher2.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/MCourse.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Animal.hbm.xml" />
+		<mapping
+			resource="sopo/cn/hibernate20191126/model/Test191205.hbm.xml" />
+	</session-factory>
 </hibernate-configuration>

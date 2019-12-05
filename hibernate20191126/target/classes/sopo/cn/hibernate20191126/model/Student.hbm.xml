@@ -21,6 +21,18 @@
             <column name="DATE" />
         </property>
         
+        <component name="studentInfo" class="sopo.cn.hibernate20191126.model.StudentInfo">
+        	<property name="classes">
+        		<column name="CLASSES"/>
+        	</property>
+        	<property name="birthDay">
+        		<column name="BIRTHDAY"/>
+        	</property>
+        	<property name="address">
+        		<column name="ADDRESS"/>
+        	</property>
+        </component>
+        
         <many-to-one name="teacher" class="sopo.cn.hibernate20191126.model.Teacher" fetch="join">
         	<column name="TEACHER_ID"/>
         </many-to-one>

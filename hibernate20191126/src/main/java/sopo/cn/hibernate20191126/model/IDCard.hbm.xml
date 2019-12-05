@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019??12??4?? ????10:54:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="sopo.cn.hibernate20191126.model.IDCard" table="IDCARD">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="cardNo" type="java.lang.String">
+            <column name="CARDNO" />
+        </property>
+        <one-to-one name="person" class="sopo.cn.hibernate20191126.model.Person" property-ref="idcard"></one-to-one>
+    </class>
+</hibernate-mapping>

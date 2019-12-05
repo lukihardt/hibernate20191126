@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019??12??3?? ????3:03:50 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="sopo.cn.hibernate20191126.model">
+    <class name="sopo.cn.hibernate20191126.model.Teacher" table="TEACHER">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="teacherName" type="java.lang.String">
+            <column name="TEACHERNAME" />
+        </property>
+        
+        <set name="students" table="STUDENT" inverse="true">
+        	<key>
+        		<column name="TEACHER_ID"></column>
+        	</key>
+        	<one-to-many class="Student"/>
+        </set>
+    </class>
+</hibernate-mapping>
